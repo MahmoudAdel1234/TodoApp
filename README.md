@@ -5,7 +5,7 @@ A simple Todo management application with basic CRUD operations and status manag
 ## Features
 
 - CRUD operations for todos
-- List todos with filtering by status
+- List todos with filtering and sorting by status, priority, and date
 - Mark todo as complete
 - Basic validation (title required, valid dates)
 
