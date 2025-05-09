@@ -21,7 +21,7 @@ A simple Todo management application with basic CRUD operations and status manag
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/MahmoudAdel1234/TodoApp.git
    cd TodoApp
    ```
 
