@@ -1,0 +1,225 @@
+/* General Styles */
+body {
+    min-height: 100vh;
+    background-color: #f8f9fa;
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Card Styles */
+.card {
+    border: none;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+.card-header {
+    background-color: white;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+/* Todo List Styles */
+.todo-list {
+    max-height: calc(100vh - 150px);
+    overflow-y: auto;
+}
+
+.todo-item {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    transition: all 0.3s;
+}
+
+.todo-item:hover {
+    background-color: #f8f9fa;
+}
+
+.todo-item:last-child {
+    border-bottom: none;
+}
+
+/* Priority Indicators */
+.priority-high {
+    border-left: 4px solid #dc3545;
+}
+
+.priority-medium {
+    border-left: 4px solid #ffc107;
+}
+
+.priority-low {
+    border-left: 4px solid #198754;
+}
+
+/* Status Badges */
+.status-badge {
+    padding: 0.35em 0.65em;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+/* Todo Actions */
+.todo-actions {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.todo-item:hover .todo-actions {
+    opacity: 1;
+}
+
+.todo-actions button {
+    transition: transform 0.2s;
+}
+
+.todo-actions button:hover {
+    transform: scale(1.1);
+}
+
+/* Todo Content */
+.todo-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.todo-description {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.due-date {
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+/* Completed Todo */
+.completed {
+    background-color: #f8f9fa;
+}
+
+.completed .todo-title {
+    text-decoration: line-through;
+    color: #6c757d;
+}
+
+/* Form Controls */
+.form-control:focus,
+.form-select:focus {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.25rem rgba(13,110,253,.25);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Modal Styles */
+/* Add Todo Modal Styles */
+#addTodoModal .modal-content {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+#addTodoModal .modal-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 12px 12px 0 0;
+    padding: 1.25rem 1.5rem;
+}
+
+#addTodoModal .modal-body {
+    padding: 1.5rem;
+}
+
+#addTodoModal .modal-footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 0 0 12px 12px;
+    padding: 1.25rem 1.5rem;
+}
+
+#addTodoModal .form-control,
+#addTodoModal .form-select {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+#addTodoModal .form-control:focus,
+#addTodoModal .form-select:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.15);
+}
+
+#addTodoModal .modal-footer {
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+#showAddTodoForm {
+    transition: transform 0.2s;
+}
+
+#showAddTodoForm:hover {
+    transform: translateY(-2px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+    .todo-list {
+        max-height: 500px;
+    }
+}
+
+/* Modal Animation Styles */
+.modal.fade .modal-dialog {
+    transform: translateY(-20px);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+}
+
+.modal.show .modal-dialog {
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* Form Stability Fixes */
+.modal-content {
+    transform: none;
+    transition: none;
+}
+
+.modal-backdrop {
+    transition: none;
+}
+
+.modal-backdrop.show {
+    opacity: 0.4;
+}
+
+/* Remove unnecessary transitions */
+#addTodoModal .form-control,
+#addTodoModal .form-select {
+    transition: border-color 0.15s ease-in-out;
+}
